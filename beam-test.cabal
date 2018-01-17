@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d3d9692a59547210838f4bcf31ad04c4f89d5c3f1638b2bd5d820ed571f0fc87
+-- hash: 56eaa9e6744fd1a787ab5a1b677d2c36aea0ee141b75eeff12743d07060c426c
 
 name:           beam-test
 version:        0.1.0.0
@@ -43,6 +43,9 @@ executable beam-test-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , beam-core
+    , beam-migrate
+    , beam-sqlite
     , beam-test
   other-modules:
       Paths_beam_test
