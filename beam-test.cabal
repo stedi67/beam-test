@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 56eaa9e6744fd1a787ab5a1b677d2c36aea0ee141b75eeff12743d07060c426c
+-- hash: 53ed3b4d3d35fa6b6f720b212ba0ba59e3c07cf08e72d015c49daa0875c98410
 
 name:           beam-test
 version:        0.1.0.0
@@ -30,11 +30,31 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , beam-core
+    , beam-migrate
+    , beam-postgres
+    , beam-sqlite
+    , text
   exposed-modules:
       Lib
   other-modules:
       Paths_beam_test
   default-language: Haskell2010
+  default-extensions:
+      CPP
+      , DeriveDataTypeable
+      , DeriveGeneric
+      , FlexibleContexts
+      , FlexibleInstances
+      , GADTs
+      , MultiParamTypeClasses
+      , OverloadedStrings
+      , OverloadedStrings
+      , RankNTypes
+      , ScopedTypeVariables
+      , StandaloneDeriving
+      , TypeApplications
+      , TypeFamilies
 
 executable beam-test-exe
   main-is: Main.hs
@@ -45,6 +65,7 @@ executable beam-test-exe
       base >=4.7 && <5
     , beam-core
     , beam-migrate
+    , beam-postgres
     , beam-sqlite
     , beam-test
   other-modules:

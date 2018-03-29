@@ -38,6 +38,7 @@ executables:
     - beam-core
     - beam-migrate
     - beam-sqlite
+    - beam-postgres
 
 tests:
   beam-test-test:

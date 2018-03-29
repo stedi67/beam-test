@@ -68,9 +68,10 @@ packages:
 
 - location:
     git: https://github.com/tathougies/beam.git
-    commit: 650515e50146e96b39d2b574c15aa24a13c37c26
+    commit: 5eafaa7302aab5ad30ff7cec8d4c3476de53693a
   extra-dep: true
   subdirs:
       - beam-core
       - beam-migrate
       - beam-sqlite
+      - beam-postgres
