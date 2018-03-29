@@ -10,6 +10,7 @@ import Data.Text (Text)
 
 import qualified Control.Exception as E
 
+-- users table
 data UserT f 
     = User 
     { _userId :: Columnar f (SqlSerial Int)
@@ -30,7 +31,9 @@ deriving instance Eq UserId
 
 instance Beamable (PrimaryKey UserT)
 instance Beamable UserT
+-- end users table
 
+-- database
 newtype MyDb f 
     = MyDb 
     { _users :: f (TableEntity UserT) 
@@ -39,6 +42,7 @@ instance Database Postgres MyDb
 
 myDb :: DatabaseSettings Postgres MyDb
 myDb = defaultDbSettings
+-- end database
 
 
 runApp :: IO ()
